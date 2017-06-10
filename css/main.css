@@ -191,7 +191,6 @@ p {
 #skills .row h2 {
   font-size: 24px;
   font-weight: 700;
-  text-transform: uppercase;
   margin: 0;
 }
 #portfolio {
@@ -205,10 +204,10 @@ p {
   color: #e5c37f;
   background-color: #e5c37f;
 }
-#portfolio img {
+#portfolio .row img {
   margin: 0 auto;
 }
-#portfolio h2 {
+#portfolio .row p {
   font-size: 18px;
   margin: 30px 0 65px 0;
 }
