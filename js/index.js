@@ -59,3 +59,7 @@ function createProgressbar(container, percentage, color) {
     bar.text.style.fontSize = '2rem';
 
     bar.animate(percentage / 100);}
+
+$(".btn-alert").click(function(){
+    alert("Project examples will be available soon!");
+});
