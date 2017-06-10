@@ -117,7 +117,7 @@ p {
   background-color: #17c2a4;
   color: white;
 }
-#services .row img {
+#services .row i {
   display: block;
   margin: 80px auto 50px auto;
 }
@@ -340,4 +340,9 @@ p {
 .social-media a:focus {
   color: #30bae7;
   text-decoration: none;
+}
+.chart {
+  width: 160px;
+  height: 160px;
+  position: relative;
 }
