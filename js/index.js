@@ -1,7 +1,7 @@
 $('body').scrollspy({offset: 120, target: '.navbar-fixed-top'})
 
 $(function() {
-    $('body').on('click', 'a', function(event) {
+    $('body').on('click', '.navbar a', function(event) {
         event.preventDefault();
         var newPosition = $($(this).attr('href')).offset().top - 83;
 

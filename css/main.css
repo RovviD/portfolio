@@ -60,7 +60,6 @@ p {
 }
 .navbar h1 a {
   display: inline-block;
-  background: url('https://i.imgur.com/68JOo4e.png') no-repeat;
   width: 117px;
   height: 37px;
   margin-top: 20px;
@@ -148,13 +147,13 @@ p {
   display: block;
   margin: 80px auto 0 auto;
 }
-#team .row adress {
+#team .row address {
   font-size: 24px;
   font-weight: 700;
   display: block;
   margin: 40px 0 20px 0;
 }
-#team .row adress small {
+#team .row address small {
   font-size: 16px;
   color: #30bae7;
 }
@@ -198,32 +197,12 @@ p {
   background-color: #ffdd99;
   color: #393939;
 }
+#portfolio p {
+  margin-bottom: 65px;
+}
 #portfolio hr {
   color: #e5c37f;
   background-color: #e5c37f;
-}
-#portfolio .nav {
-  margin: 45px 0 60px 0;
-  display: flex;
-  justify-content: center;
-}
-#portfolio .nav a {
-  padding: 12px 30px;
-  margin: 0 5px 0 5px;
-}
-#portfolio .nav-pills > li.active > a,
-#portfolio li > a:hover,
-#portfolio li > a:focus {
-  background: white;
-}
-#portfolio a {
-  background-color: #ebc985;
-  text-transform: uppercase;
-  color: #393939;
-  font-size: 18px;
-}
-#portfolio a:hover {
-  background: white;
 }
 #portfolio img {
   margin: 0 auto;
@@ -259,6 +238,9 @@ p {
 }
 #feedback img {
   width: 100px;
+}
+#feedback .row {
+  filter: blur(5px);
 }
 #feedback .row q {
   margin: 0 auto 20px auto;
