@@ -32,7 +32,7 @@ function createProgressbar(container, percentage, color) {
         color: '#000',
         // This has to be the same size as the maximum width to
         // prevent clipping
-        strokeWidth: 50,
+        strokeWidth: 40,
         trailWidth: 10,
         easing: 'easeInOut',
         duration: 1400,

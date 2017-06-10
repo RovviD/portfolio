@@ -118,7 +118,8 @@ p {
 #services .row i {
   display: block;
   margin: 80px auto 50px auto;
-  font-size: 120px;
+  font-size: 140px;
+  color: #e7f1f8;
 }
 #services .row h2 {
   font-size: 24px;
@@ -184,8 +185,11 @@ p {
   color: #c8d9e5;
   background-color: #dfe8ed;
 }
-#skills .row img {
-  margin: 80px auto 32px auto;
+#skills .row .chart {
+  width: 250px;
+  height: 250px;
+  position: relative;
+  margin: 40px auto 0 auto;
 }
 #skills .row h2 {
   font-size: 24px;
@@ -322,9 +326,4 @@ p {
 .social-media a:focus {
   color: #30bae7;
   text-decoration: none;
-}
-.chart {
-  width: 160px;
-  height: 160px;
-  position: relative;
 }
