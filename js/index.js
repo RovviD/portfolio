@@ -58,5 +58,4 @@ function createProgressbar(container, percentage, color) {
     bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
     bar.text.style.fontSize = '2rem';
 
-    bar.animate(percentage / 100);
-}
+    bar.animate(percentage / 100);}
