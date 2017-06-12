@@ -1,4 +1,27 @@
-$('body').scrollspy({offset: 120, target: '.navbar-fixed-top'})
+function checkMenu() {
+    if ($(document).scrollTop() > 20) {
+        $('nav').addClass('shrink');
+    } else {
+        $('nav').removeClass('shrink');
+    }
+}
+
+window.sr = ScrollReveal();
+sr.reveal('#skills');
+
+$('body').scrollspy({offset: 120, target: '.navbar-fixed-top'});
+
+var skillsReady = false;
+
+$('.navbar-fixed-top ul li:eq(3)').on('activate.bs.scrollspy', function () {
+    if (!skillsReady) {
+        skillsReady = true;
+        $('.chart').each(function(i, object) {
+            createProgressbar(object, $(object).data('percentage'), $(object).data('color'));
+        });
+        $('#skills h2').css('opacity', 1).addClass('animated fadeIn');
+    }
+});
 
 $(function() {
     $('body').on('click', '.navbar a, .btn-scroll', function(event) {
@@ -14,17 +37,14 @@ $(function() {
         }, 1000, 'easeInOutExpo');
     });
 
-    $('.chart').each(function(i, object) {
-        createProgressbar(object, $(object).data('percentage'), $(object).data('color'));
-    });
+    checkMenu();
+
+    $('[data-toggle="popover"]').popover();
 });
 
+
 $(window).scroll(function() {
-    if ($(document).scrollTop() > 20) {
-        $('nav').addClass('shrink');
-    } else {
-        $('nav').removeClass('shrink');
-    }
+    checkMenu();
 });
 
 function createProgressbar(container, percentage, color) {
@@ -58,8 +78,22 @@ function createProgressbar(container, percentage, color) {
     bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
     bar.text.style.fontSize = '2rem';
 
-    bar.animate(percentage / 100);}
+    bar.animate(percentage / 100);
+}
 
-$(".btn-alert").click(function(){
-    alert("Project examples will be available soon!");
+
+$('#contact .action-button').click(function(event){
+    var email = $('[name="email"]', '#contact form').val();
+    var name = $('[name="name"]', '#contact form').val();
+    var text = $('[name="text"]', '#contact form').val();
+
+    if (email && name && text) {
+        $('#contact form').submit();
+    } else {
+        $(event.currentTarget).popover({
+            title: 'Error!',
+            content: 'Please fill out all fields before sending the form.',
+        });
+    }
+
 });
