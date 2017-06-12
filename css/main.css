@@ -263,13 +263,16 @@ p {
 #contact {
   background-color: #3c5499;
   padding: 0 auto !important;
-  color: white;
 }
 #contact hr {
   color: #273a71;
   background-color: #273a71;
 }
+#contact h1 {
+  color: white;
+}
 #contact p {
+  color: white;
   margin-bottom: 80px;
 }
 #contact input {
@@ -290,7 +293,8 @@ p {
   height: 200px;
   padding: 20px 0 0 25px;
 }
-#contact .form-control {
+#contact input.form-control,
+#contact textarea.form-control {
   color: white;
   font-size: 18px;
 }
@@ -315,13 +319,14 @@ p {
   margin: 22px 0;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 .social-media a {
   color: white;
   font-size: 24px;
   text-transform: capitalize;
   font-weight: 600;
-  margin: 0 22px;
+  margin: 0 22px 22px 0;
 }
 .social-media a:hover,
 .social-media a:focus {

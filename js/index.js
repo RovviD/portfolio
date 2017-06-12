@@ -82,18 +82,21 @@ function createProgressbar(container, percentage, color) {
 }
 
 
+
 $('#contact .action-button').click(function(event){
-    var email = $('[name="email"]', '#contact form').val();
+    event.preventDefault();
+    //$(event.currentTarget).popover('hide');
+
+    var email = $('[name="_replyto"]', '#contact form').val();
     var name = $('[name="name"]', '#contact form').val();
     var text = $('[name="text"]', '#contact form').val();
 
+    console.log(email && name && text, email, name, text);
     if (email && name && text) {
+        $(event.currentTarget).popover('hide');
         $('#contact form').submit();
     } else {
-        $(event.currentTarget).popover({
-            title: 'Error!',
-            content: 'Please fill out all fields before sending the form.',
-        });
+        $(event.currentTarget).popover('show');
     }
 
 });

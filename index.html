@@ -19,7 +19,8 @@
 <body>
 <nav id="top" class="navbar navbar-fixed-top">
     <a href="#home"><h1 class="pull-left">&lt;AP&sol;&gt;</h1></a>
-    <div class="container-fluid">
+
+    <div class="container-fluid hidden-sm hidden-xs">
         <ul class="nav nav-pills pull-right">
             <li role="presentation" class="active"><a href="#home">Home</a></li>
             <li role="presentation"><a href="#services">Services</a></li>
@@ -260,7 +261,7 @@
                     <textarea name="text" class="form-control" placeholder="Your Message"></textarea>
                 </div>
             </div>
-            <button class="action-button">Send message</button>
+            <button data-toggle="popover" data-trigger="manual" data-title="Error!" data-content="Please fill out all fields before sending the form." class="action-button">Send message</button>
         </form>
     </div>
 </section>
@@ -268,7 +269,7 @@
 <div class="social-media">
     <div class="container">
         <footer>
-            <a href="https://www.facebook.com/adrian.paszul">Facebook</a>
+            <!--<a href="https://www.facebook.com/adrian.paszul">Facebook</a>-->
             <a href="https://twitter.com/Adrian_Paszul">Twitter</a>
             <a href="https://www.linkedin.com/in/adrian-paszul-699455117/">LinkedIn</a>
             <a href="https://github.com/RovviD">GitHub</a>

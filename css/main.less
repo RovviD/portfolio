@@ -324,14 +324,18 @@ p {
 #contact {
   background-color: #3c5499;
   padding: 0 auto !important;
-  color: white;
 
   hr {
     color: #273a71;
     background-color: #273a71;
   }
 
+  h1 {
+    color: white;
+  }
+
   p {
+    color: white;
     margin-bottom: 80px;
   }
 
@@ -355,7 +359,7 @@ p {
     padding: 20px 0 0 25px;
   }
 
-  .form-control {
+  input.form-control, textarea.form-control  {
     color: white;
     font-size: 18px;
   }
@@ -385,6 +389,7 @@ p {
     margin: 22px 0;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
   }
 
   a {
@@ -392,7 +397,7 @@ p {
     font-size: 24px;
     text-transform: capitalize;
     font-weight: 600;
-    margin: 0 22px;
+    margin: 0 22px 22px 0;
   }
 
   a:hover, a:focus {
