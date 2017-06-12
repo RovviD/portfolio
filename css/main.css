@@ -193,6 +193,7 @@ p {
   font-size: 24px;
   font-weight: 700;
   margin: 0;
+  opacity: 0;
 }
 #portfolio {
   background-color: #ffdd99;
@@ -280,7 +281,6 @@ p {
 #contact input::placeholder,
 #contact textarea::placeholder {
   color: white;
-  font-size: 18px;
 }
 #contact textarea {
   background-color: #273a71;
@@ -289,6 +289,10 @@ p {
   margin: 0 auto;
   height: 200px;
   padding: 20px 0 0 25px;
+}
+#contact .form-control {
+  color: white;
+  font-size: 18px;
 }
 #contact .action-button {
   box-shadow: 0 6px #299ec5;
