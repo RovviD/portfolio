@@ -268,11 +268,12 @@ p {
   color: #273a71;
   background-color: #273a71;
 }
-#contact h1 {
+#contact h1,
+#contact a,
+#contact p {
   color: white;
 }
 #contact p {
-  color: white;
   margin-bottom: 80px;
 }
 #contact input {
@@ -315,8 +316,7 @@ p {
   background-color: #344b8e;
 }
 .social-media footer {
-  margin: 0 auto;
-  margin: 22px 0;
+  margin: 22px 0 0;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
