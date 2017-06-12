@@ -57,9 +57,10 @@ p {
   background: #87509c;
   transition: all 0.4s ease;
 }
-.navbar img {
-  display: inline-block;
-  margin-top: 20px;
+.navbar h1 {
+  margin-top: 13px;
+  color: white;
+  font-size: 50px;
 }
 .navbar ul {
   padding: 20px;
