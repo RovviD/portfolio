@@ -40,6 +40,13 @@ $(function() {
     checkMenu();
 
     $('[data-toggle="popover"]').popover();
+
+    $('#team a').click(function(event){
+        if ($(event.currentTarget).attr('href') === '#') {
+            event.preventDefault();
+            $(event.currentTarget).addClass('animated fadeOut');
+        }
+    });
 });
 
 
