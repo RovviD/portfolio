@@ -113,21 +113,59 @@ p {
   background-color: #17c2a4;
   color: white;
 }
-#services .row i {
+#services .service i {
   display: block;
   margin: 80px auto 50px auto;
   font-size: 140px;
   color: #e7f1f8;
 }
-#services .row h2 {
+#services .service h2 {
   font-size: 24px;
   text-transform: uppercase;
   font-weight: 700;
 }
-#services .row p {
+#services .service p {
   font-size: 16px;
   margin: 24px auto 0 auto;
   font-weight: 300;
+}
+@media all and (min-width: 768px) {
+  #services {
+    grid-template-columns: 10px auto auto 10px;
+    grid-template-rows: auto 80px auto auto 50px;
+    grid-template-areas: ". top top ." ". . . ." ". col1 col2 ." ". col3 col4 .";
+    display: grid;
+    grid-column-gap: 10px;
+  }
+  #services div:nth-child(1) {
+    grid-area: top;
+  }
+  #services div:nth-child(2) {
+    grid-area: col1;
+  }
+  #services div:nth-child(3) {
+    grid-area: col2;
+  }
+  #services div:nth-child(4) {
+    grid-area: col3;
+  }
+  #services div:nth-child(5) {
+    grid-area: col4;
+  }
+}
+@media all and (min-width: 992px) {
+  #services {
+    grid-template-columns: 10px auto auto auto auto 10px;
+    grid-template-rows: auto 80px auto 50px;
+    grid-template-areas: ". top top top top ." ". . . . . ." ". col1 col2 col3 col4 .";
+  }
+}
+@media all and (min-width: 1170px) {
+  #services {
+    grid-template-columns: auto 271.5px 271.5px 271.5px 271.5px auto;
+    grid-template-rows: auto 80px auto 50px;
+    grid-column-gap: 28px;
+  }
 }
 #team {
   background-color: #e7f1f8;
