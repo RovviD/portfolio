@@ -391,24 +391,24 @@ p {
   background-color: #30bae7;
   box-shadow: none;
 }
-.social-media {
+#social-media {
   background-color: #344b8e;
 }
-.social-media footer {
+#social-media footer {
   margin: 22px 0 0;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
-.social-media a {
+#social-media a {
   color: white;
   font-size: 24px;
   text-transform: capitalize;
   font-weight: 600;
   margin: 0 22px 22px 0;
 }
-.social-media a:hover,
-.social-media a:focus {
+#social-media a:hover,
+#social-media a:focus {
   color: #30bae7;
   text-decoration: none;
 }
