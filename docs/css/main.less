@@ -4,6 +4,9 @@
 
 #services, #skills, #team {
   @media all and (min-width: 768px) {
+    display: grid;
+    grid-column-gap: 5px;
+
     div:nth-child(1) {
       grid-area: top;
     }
@@ -25,11 +28,9 @@
     ". . . ."
     ". col1 col2 ."
     ". col3 col4 .";
-    display: grid;
-    grid-column-gap: 5px;
   }
 
-  @media all and (min-width: 992px) {
+  @media all and (min-width: 1020px) {
     grid-template-columns: 10px auto auto auto auto 10px;
     grid-template-rows: auto 80px auto 50px;
     grid-template-areas: ". top top top top ."
@@ -38,12 +39,11 @@
   }
 
   @media all and (min-width: 1220px) {
-    @gutter-size: 28;
-    @block-size: unit((1170 - 3*@gutter-size) /4, px);
+    @block-size: unit((1170 - 3*28) /4, px);
 
     grid-template-columns: auto @block-size @block-size @block-size @block-size auto;
     grid-template-rows: auto 80px auto 50px;
-    grid-column-gap: unit(@gutter-size, px);
+    grid-column-gap: unit(28, px);
 
     /* 3 x @gutter + 4 x @block = 1170 */
     /* b = (1170 - 3g) / 4*/
@@ -328,12 +328,11 @@ p {
   }
 
   @media all and (min-width: 800px) {
-
     display: grid;
+    grid-column-gap: 30px;
 
     grid-template-columns: 10px auto auto 10px;
     grid-template-rows: auto 80px auto auto auto 50px;
-    grid-column-gap: 28px;
     grid-template-areas: ". top top ."
     ". . . ."
     ". col1 col2 ."
@@ -361,12 +360,11 @@ p {
   }
 
   @media all and (min-width: 1220px) {
-
-    @block-size: unit((1220 - 28) /2, px);
+    @block-size: unit((1220 - 30) /2, px);
 
     grid-template-columns: auto @block-size @block-size auto;
     grid-template-rows: auto 80px auto auto auto 50px;
-    grid-column-gap: 28px;
+    grid-column-gap: 30px;
   }
 }
 
@@ -461,7 +459,6 @@ p {
   }
 
   @media all and (min-width: 1220px) {
-
     @block-size: unit((1220 - 3*30) /2 - (2*100), px);
 
     grid-template-columns: auto 100px @block-size 100px @block-size auto;
