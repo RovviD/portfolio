@@ -178,22 +178,22 @@
     </div>
 
     <div class="portfolio">
-        <img src="https://i.imgur.com/9qry93U.png" alt="Project">
+        <img class="img-responsive" src="https://i.imgur.com/9qry93U.png" alt="Project">
         <p>Unfortunately, this is not mine...</p>
     </div>
 
     <div class="portfolio">
-        <img src="https://i.imgur.com/Y8a0WnM.png" alt="Project">
+        <img class="img-responsive" src="https://i.imgur.com/Y8a0WnM.png" alt="Project">
         <p>This is not mine, too</p>
     </div>
 
     <div class="portfolio">
-        <img src="https://i.imgur.com/CEczhmH.png" alt="Project">
+        <img class="img-responsive" src="https://i.imgur.com/CEczhmH.png" alt="Project">
         <p>But this! No... neither</p>
     </div>
 
     <div class="portfolio">
-        <img src="https://i.imgur.com/YaFCEV0.png" alt="Project">
+        <img class="img-responsive" src="https://i.imgur.com/YaFCEV0.png" alt="Project">
         <p>One day my example will be here, <br>I had to start somewhere</p>
     </div>
 
@@ -203,7 +203,7 @@
 </section>
 
 <section id="feedback">
-    <div class="feedback">
+    <div>
         <h1 class="text-center">What people say about me</h1>
         <hr>
         <p class="text-center">This is just an example of a feedback section look,<br> but someday you will find your opinion about my work here</p>
@@ -211,6 +211,9 @@
 
     <div class="feedback">
         <img class="img-responsive img-circle" src="http://www.stalkcelebs.com/img-folder/2016/07/chanel-iman-at-2016-maxim-hot-100-party-in-los-angeles----july-30-2016_t_431071054.jpg" alt="Photo">
+    </div>
+
+    <div class="feedback">
         <q>Nullam dapibus blandit orci, viverra gravida dui lobortis eget. Maecenas fringilla urna eu nisl scelerisque.</q>
         <address>
             Chanel Iman<br>
@@ -220,6 +223,9 @@
 
     <div class="feedback">
         <img class="img-responsive img-circle" src="http://images4.fanpop.com/image/photos/17900000/Adriana-adriana-lima-17921677-100-100.jpg" alt="Photo">
+    </div>
+
+    <div class="feedback">
         <q>Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta.</q>
         <address>
             Chanel Iman<br>
@@ -229,6 +235,9 @@
 
     <div class="feedback">
         <img class="img-responsive img-circle" src="https://hips.hearstapps.com/cosmouk.cdnds.net/16/21/2048x2048/square-1464114185-anne-hathaway-at-the-premiere-of-alice-through-the-looking-glass.jpg?resize=100:*" alt="Photo">
+    </div>
+
+    <div class="feedback">
         <q>Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta.</q>
         <address>
             Chanel Iman<br>
@@ -238,6 +247,9 @@
 
     <div class="feedback">
         <img class="img-responsive img-circle" src="http://s3.party.pl/styl-gwiazd/emma-stone-403351-GALLERY_THUM.jpg" alt="Photo">
+    </div>
+
+    <div class="feedback">
         <q>Phasellus non purus vel arcu tempor commodo. Fusce semper, purus vel luctus molestie, risus sem cursus neque.</q>
         <address>
             Chanel Iman<br>
@@ -247,28 +259,30 @@
 </section>
 
 <section id="contact">
-    <div class="container text-center">
+    <div class="text-center">
         <h1>Get in touch</h1>
         <hr>
         <p>e-mail: <a href="mailto:adrian.paszul@gmail.com">adrian.paszul@gmail.com</a>
             <br>phone: <a href="callto:+48570104119">+48 570 104 119</a></p>
-        <form method="POST" action="https://formspree.io/adrian.paszul@gmail.com">
-            <div class="row">
-                <div class="col-md-5 col-md-offset-1">
-                    <input name="name" type="text" class="form-control" placeholder="Your Name">
-                </div>
-                <div class="col-md-5">
-                    <input name="_replyto" type="text" class="form-control" placeholder="Your Email">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-10 col-md-offset-1">
-                    <textarea name="text" class="form-control" placeholder="Your Message"></textarea>
-                </div>
-            </div>
-            <button data-toggle="popover" data-trigger="manual" data-title="Error!" data-content="Please fill out all fields before sending the form." class="action-button">Send message</button>
-        </form>
     </div>
+
+    <form method="POST" action="https://formspree.io/adrian.paszul@gmail.com">
+        <div>
+            <input name="name" type="text" class="form-control" placeholder="Your Name">
+        </div>
+
+        <div>
+            <input name="_replyto" type="text" class="form-control" placeholder="Your Email">
+        </div>
+
+        <div>
+            <textarea name="text" class="form-control" placeholder="Your Message"></textarea>
+        </div>
+
+        <div>
+            <button data-toggle="popover" data-trigger="manual" data-title="Error!" data-content="Please fill out all fields before sending the form." class="action-button">Send message</button>
+        </div>
+    </form>
 </section>
 
 <div id="social-media">
