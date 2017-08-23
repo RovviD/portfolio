@@ -449,15 +449,6 @@ p {
   background-color: #30bae7;
   box-shadow: none;
 }
-@media all and (min-width: 800px) {
-  #contact {
-    display: grid;
-    grid-column-gap: 5px;
-    grid-template-columns: 10px auto auto 10px;
-    grid-template-rows: auto 80px auto auto 50px;
-    grid-template-areas: ". top top ." ". . . ." ". col1 col2 ." ". col3 col3 ." ". col4 .";
-  }
-}
 #social-media {
   background-color: #344b8e;
 }
