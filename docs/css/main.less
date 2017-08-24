@@ -2,38 +2,66 @@
   font-family: 'Titillium Web', sans-serif;
 }
 
-#services, #skills, #team {
-  @media all and (min-width: 768px) {
-    display: grid;
-    grid-column-gap: 5px;
+.display-gap-grid {
+  display: grid;
+  grid-column-gap: 30px;
+}
 
-    div:nth-child(1) {
-      grid-area: top;
-    }
-    div:nth-child(2) {
-      grid-area: col1;
-    }
-    div:nth-child(3) {
-      grid-area: col2;
-    }
-    div:nth-child(4) {
-      grid-area: col3;
-    }
-    div:nth-child(5) {
-      grid-area: col4;
-    }
+.grid-area {
+  div:nth-child(1) {
+    grid-area: top;
+  }
+  div:nth-child(2) {
+    grid-area: col1;
+  }
+  div:nth-child(3) {
+    grid-area: col2;
+  }
+  div:nth-child(4) {
+    grid-area: col3;
+  }
+  div:nth-child(5) {
+    grid-area: col4;
+  }
+}
+
+.four-column-grid {
+  display: grid;
+  grid-column-gap: 5px;
+
+  grid-template-columns: 10px auto auto 10px;
+  grid-template-rows: 120px auto 120px auto 65px auto 65px auto 65px auto 120px;
+  grid-template-areas: ". . . ."
+  ". top top ."
+  ". . . ."
+  ". col1 col1 ."
+  ". . . ."
+  ". col2 col2 ."
+  ". . . ."
+  ". col3 col3 ."
+  ". . . ."
+  ". col4 col4 .";
+
+  .grid-area;
+
+  @media all and (min-width: 768px) {
     grid-template-columns: 10px auto auto 10px;
-    grid-template-rows: auto 80px auto auto 50px;
-    grid-template-areas: ". top top ."
+    grid-template-rows: 120px auto 120px auto 65px auto 120px;
+    grid-template-areas:". . . ."
+    ". top top ."
     ". . . ."
     ". col1 col2 ."
+    ". . . ."
     ". col3 col4 .";
+
+    .grid-area;
   }
 
   @media all and (min-width: 1020px) {
     grid-template-columns: 10px auto auto auto auto 10px;
-    grid-template-rows: auto 80px auto 50px;
-    grid-template-areas: ". top top top top ."
+    grid-template-rows: 120px auto 120px auto 120px;
+    grid-template-areas: ". . . . . ."
+    ". top top top top ."
     ". . . . . ."
     ". col1 col2 col3 col4 .";
   }
@@ -42,17 +70,12 @@
     @block-size: unit((1170 - 3*28) /4, px);
 
     grid-template-columns: auto @block-size @block-size @block-size @block-size auto;
-    grid-template-rows: auto 80px auto 50px;
+    grid-template-rows: 120px auto 120px auto 120px;
     grid-column-gap: unit(28, px);
 
     /* 3 x @gutter + 4 x @block = 1170 */
     /* b = (1170 - 3g) / 4*/
   }
-}
-
-section {
-  padding-top: 120px;
-  padding-bottom: 120px;
 }
 
 h1 {
@@ -151,6 +174,8 @@ p {
 }
 
 #home {
+  padding-top: 120px;
+  padding-bottom: 120px;
   background-color: #87509c;
   color: white;
 
@@ -181,46 +206,46 @@ p {
 #services {
   background-color: #17c2a4;
   color: white;
+  .four-column-grid;
 
-  .service {
-    i {
-      display: block;
-      margin: 80px auto 50px auto;
-      font-size: 140px;
-      color: #e7f1f8;
-    }
+  i {
+    display: block;
+    margin-bottom: 50px;
+    font-size: 140px;
+    color: #e7f1f8;
+  }
 
-    h2 {
-      font-size: 24px;
-      text-transform: uppercase;
-      font-weight: 700;
-    }
+  h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
 
-    p {
-      font-size: 16px;
-      margin: 24px auto 0 auto;
-      font-weight: 300;
-    }
+  p {
+    font-size: 16px;
+    margin: 24px auto 0 auto;
+    font-weight: 300;
   }
 }
 
 #team {
   background-color: #e7f1f8;
   color: #3c4761;
+  .four-column-grid;
 
   hr {
     color: #c8d9e5;
     background-color: #c8d9e5;
   }
 
-  .team {
+  >div {
     color: #27283d;
 
     img {
       width: 200px;
       height: 200px;
       display: block;
-      margin: 80px auto 0 auto;
+      margin: 0 auto;
     }
 
     address {
@@ -237,7 +262,6 @@ p {
 
     p {
       font-size: 16px;
-      margin-top: 30px;
       font-weight: 300;
     }
 
@@ -262,18 +286,19 @@ p {
 
 #skills {
   color: #3c4761;
+  .four-column-grid;
 
   hr {
     color: #c8d9e5;
     background-color: #dfe8ed;
   }
 
-  .skills {
+  >div {
     .chart {
       width: 250px;
       height: 250px;
       position: relative;
-      margin: 40px auto 0 auto;
+      margin: 0 auto;
 
     }
 
@@ -291,23 +316,19 @@ p {
   background-color: #ffdd99;
   color: #393939;
 
-  p {
-    margin-bottom: 65px;
-  }
-
   hr {
     color: #e5c37f;
     background-color: #e5c37f;
   }
 
-  .portfolio{
+  >div {
     img {
       margin: 0 auto;
     }
 
     p {
       font-size: 18px;
-      margin: 30px 0 65px 0;
+      margin-top: 30px;
     }
   }
 
@@ -327,33 +348,42 @@ p {
     box-shadow: none;
   }
 
+  .display-gap-grid;
+
+  grid-template-columns: 10px auto auto 10px;
+  grid-template-rows: 120px auto 120px auto 65px auto 65px auto 65px auto 65px auto 120px;
+  grid-template-areas: ". . . ."
+  ". top top ."
+  ". . . ."
+  ". col1 col1 ."
+  ". . . ."
+  ". col2 col2 ."
+  ". . . ."
+  ". col3 col3 ."
+  ". . . ."
+  ". col4 col4 ."
+  ". . . ."
+  ". btn btn .";
+
+  .grid-area;
+  div:nth-child(6) {
+    grid-area: btn;
+  }
+
   @media all and (min-width: 800px) {
-    display: grid;
-    grid-column-gap: 30px;
 
     grid-template-columns: 10px auto auto 10px;
-    grid-template-rows: auto 80px auto auto auto 50px;
-    grid-template-areas: ". top top ."
+    grid-template-rows: 120px auto 120px 1fr 65px 1fr 65px auto 120px;
+    grid-template-areas: ". . . ."
+    ". top top ."
     ". . . ."
     ". col1 col2 ."
+    ". . . ."
     ". col3 col4 ."
+    ". . . ."
     ". btn btn .";
 
-    div:nth-child(1) {
-      grid-area: top;
-    }
-    div:nth-child(2) {
-      grid-area: col1;
-    }
-    div:nth-child(3) {
-      grid-area: col2;
-    }
-    div:nth-child(4) {
-      grid-area: col3;
-    }
-    div:nth-child(5) {
-      grid-area: col4;
-    }
+    .grid-area;
     div:nth-child(6) {
       grid-area: btn;
     }
@@ -363,7 +393,7 @@ p {
     @block-size: unit((1220 - 30) /2, px);
 
     grid-template-columns: auto @block-size @block-size auto;
-    grid-template-rows: auto 80px auto auto auto 50px;
+    grid-template-rows: 120px auto 120px 1fr 65px 1fr 65px auto 120px;
     grid-column-gap: 30px;
   }
 }
@@ -378,15 +408,11 @@ p {
     background-color: #b73c6d;
   }
 
-  p {
-    margin-bottom: 80px;
-  }
-
   img {
     width: 100px;
   }
 
-  .feedback {
+  >div {
     filter: blur(5px);
 
     q {
@@ -400,7 +426,6 @@ p {
       text-transform: uppercase;
       font-size: 24px;
       font-weight: 700;
-      margin-bottom: 120px;
     }
 
     small {
@@ -409,33 +434,22 @@ p {
     }
   }
 
-    display: grid;
-    grid-column-gap: 30px;
+    .display-gap-grid;
 
     grid-template-columns: 10px auto auto 10px;
-    grid-template-rows: auto 80px auto auto auto auto 50px;
-    grid-template-areas: ". top top ."
+    grid-template-rows: 120px auto 120px auto 80px auto 80px auto 80px auto 120px;
+    grid-template-areas: ". . . ."
+    ". top top ."
     ". . . ."
     ". col1 col2 ."
+    ". . . ."
     ". col3 col4 ."
+    ". . . ."
     ". col5 col6 ."
+    ". . . ."
     ". col7 col8 .";
 
-    div:nth-child(1) {
-      grid-area: top;
-    }
-    div:nth-child(2) {
-      grid-area: col1;
-    }
-    div:nth-child(3) {
-      grid-area: col2;
-    }
-    div:nth-child(4) {
-      grid-area: col3;
-    }
-    div:nth-child(5) {
-      grid-area: col4;
-    }
+    .grid-area;
     div:nth-child(6) {
       grid-area: col5;
     }
@@ -451,10 +465,12 @@ p {
 
   @media all and (min-width: 800px) {
     grid-template-columns: 10px auto auto auto auto 10px;
-    grid-template-rows: auto 80px auto auto 50px;
-    grid-template-areas: ". top top top top ."
+    grid-template-rows: 120px auto 120px auto 120px auto 120px;
+    grid-template-areas: ". . . . . ."
+    ". top top top top ."
     ". . . . . ."
     ". col1 col2 col3 col4 ."
+    ". . . . . ."
     ". col5 col6 col7 col8 .";
   }
 
@@ -462,14 +478,15 @@ p {
     @block-size: unit((1220 - 3*30) /2 - (2*100), px);
 
     grid-template-columns: auto 100px @block-size 100px @block-size auto;
-    grid-template-rows: auto 80px auto auto 50px;
+    grid-template-rows: 120px auto 120px auto 120px auto 120px;
     grid-column-gap: unit(30, px);
   }
 }
 
 #contact {
   background-color: #3c5499;
-  padding: 0 auto !important;
+  padding-top: 120px;
+  padding-bottom: 120px;
 
   hr {
     color: #273a71;
