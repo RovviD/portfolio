@@ -1,9 +1,14 @@
 * {
   font-family: 'Titillium Web', sans-serif;
 }
+section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
 .display-gap-grid {
   display: grid;
   grid-column-gap: 30px;
+  grid-row-gap: 55px;
 }
 .grid-area div:nth-child(1) {
   grid-area: top;
@@ -22,10 +27,12 @@
 }
 .four-column-grid {
   display: grid;
-  grid-column-gap: 5px;
-  grid-template-columns: 10px auto auto 10px;
-  grid-template-rows: 120px auto 120px auto 65px auto 65px auto 65px auto 120px;
-  grid-template-areas: ". . . ." ". top top ." ". . . ." ". col1 col1 ." ". . . ." ". col2 col2 ." ". . . ." ". col3 col3 ." ". . . ." ". col4 col4 .";
+  grid-column-gap: 30px;
+  grid-row-gap: 55px;
+  grid-column-gap: 20px;
+  grid-template-columns: 10px 1fr 1fr 10px;
+  grid-template-rows: auto 10px auto auto auto auto;
+  grid-template-areas: ". top top ." ". . . ." ". col1 col1 ." ". col2 col2 ." ". col3 col3 ." ". col4 col4 .";
 }
 .four-column-grid div:nth-child(1) {
   grid-area: top;
@@ -44,9 +51,8 @@
 }
 @media all and (min-width: 768px) {
   .four-column-grid {
-    grid-template-columns: 10px auto auto 10px;
-    grid-template-rows: 120px auto 120px auto 65px auto 120px;
-    grid-template-areas: ". . . ." ". top top ." ". . . ." ". col1 col2 ." ". . . ." ". col3 col4 .";
+    grid-template-rows: auto 10px auto auto;
+    grid-template-areas: ". top top ." ". . . ." ". col1 col2 ." ". col3 col4 .";
   }
   .four-column-grid div:nth-child(1) {
     grid-area: top;
@@ -66,16 +72,15 @@
 }
 @media all and (min-width: 1020px) {
   .four-column-grid {
-    grid-template-columns: 10px auto auto auto auto 10px;
-    grid-template-rows: 120px auto 120px auto 120px;
-    grid-template-areas: ". . . . . ." ". top top top top ." ". . . . . ." ". col1 col2 col3 col4 .";
+    grid-row-gap: 120px;
+    grid-template-columns: 10px 1fr 1fr 1fr 1fr 10px;
+    grid-template-rows: auto auto;
+    grid-template-areas: ". top top top top ." ". col1 col2 col3 col4 .";
   }
 }
 @media all and (min-width: 1220px) {
   .four-column-grid {
-    grid-template-columns: auto 271.5px 271.5px 271.5px 271.5px auto;
-    grid-template-rows: 120px auto 120px auto 120px;
-    grid-column-gap: 28px;
+    grid-template-columns: auto 284px 284px 284px 284px auto;
     /* 3 x @gutter + 4 x @block = 1170 */
     /* b = (1170 - 3g) / 4*/
   }
@@ -162,8 +167,6 @@ p {
   box-shadow: 0 3px 5px #643a79;
 }
 #home {
-  padding-top: 120px;
-  padding-bottom: 120px;
   background-color: #87509c;
   color: white;
 }
@@ -190,10 +193,12 @@ p {
   background-color: #17c2a4;
   color: white;
   display: grid;
-  grid-column-gap: 5px;
-  grid-template-columns: 10px auto auto 10px;
-  grid-template-rows: 120px auto 120px auto 65px auto 65px auto 65px auto 120px;
-  grid-template-areas: ". . . ." ". top top ." ". . . ." ". col1 col1 ." ". . . ." ". col2 col2 ." ". . . ." ". col3 col3 ." ". . . ." ". col4 col4 .";
+  grid-column-gap: 30px;
+  grid-row-gap: 55px;
+  grid-column-gap: 20px;
+  grid-template-columns: 10px 1fr 1fr 10px;
+  grid-template-rows: auto 10px auto auto auto auto;
+  grid-template-areas: ". top top ." ". . . ." ". col1 col1 ." ". col2 col2 ." ". col3 col3 ." ". col4 col4 .";
 }
 #services div:nth-child(1) {
   grid-area: top;
@@ -212,9 +217,8 @@ p {
 }
 @media all and (min-width: 768px) {
   #services {
-    grid-template-columns: 10px auto auto 10px;
-    grid-template-rows: 120px auto 120px auto 65px auto 120px;
-    grid-template-areas: ". . . ." ". top top ." ". . . ." ". col1 col2 ." ". . . ." ". col3 col4 .";
+    grid-template-rows: auto 10px auto auto;
+    grid-template-areas: ". top top ." ". . . ." ". col1 col2 ." ". col3 col4 .";
   }
   #services div:nth-child(1) {
     grid-area: top;
@@ -234,16 +238,15 @@ p {
 }
 @media all and (min-width: 1020px) {
   #services {
-    grid-template-columns: 10px auto auto auto auto 10px;
-    grid-template-rows: 120px auto 120px auto 120px;
-    grid-template-areas: ". . . . . ." ". top top top top ." ". . . . . ." ". col1 col2 col3 col4 .";
+    grid-row-gap: 120px;
+    grid-template-columns: 10px 1fr 1fr 1fr 1fr 10px;
+    grid-template-rows: auto auto;
+    grid-template-areas: ". top top top top ." ". col1 col2 col3 col4 .";
   }
 }
 @media all and (min-width: 1220px) {
   #services {
-    grid-template-columns: auto 271.5px 271.5px 271.5px 271.5px auto;
-    grid-template-rows: 120px auto 120px auto 120px;
-    grid-column-gap: 28px;
+    grid-template-columns: auto 284px 284px 284px 284px auto;
     /* 3 x @gutter + 4 x @block = 1170 */
     /* b = (1170 - 3g) / 4*/
   }
@@ -268,10 +271,12 @@ p {
   background-color: #e7f1f8;
   color: #3c4761;
   display: grid;
-  grid-column-gap: 5px;
-  grid-template-columns: 10px auto auto 10px;
-  grid-template-rows: 120px auto 120px auto 65px auto 65px auto 65px auto 120px;
-  grid-template-areas: ". . . ." ". top top ." ". . . ." ". col1 col1 ." ". . . ." ". col2 col2 ." ". . . ." ". col3 col3 ." ". . . ." ". col4 col4 .";
+  grid-column-gap: 30px;
+  grid-row-gap: 55px;
+  grid-column-gap: 20px;
+  grid-template-columns: 10px 1fr 1fr 10px;
+  grid-template-rows: auto 10px auto auto auto auto;
+  grid-template-areas: ". top top ." ". . . ." ". col1 col1 ." ". col2 col2 ." ". col3 col3 ." ". col4 col4 .";
 }
 #team div:nth-child(1) {
   grid-area: top;
@@ -290,9 +295,8 @@ p {
 }
 @media all and (min-width: 768px) {
   #team {
-    grid-template-columns: 10px auto auto 10px;
-    grid-template-rows: 120px auto 120px auto 65px auto 120px;
-    grid-template-areas: ". . . ." ". top top ." ". . . ." ". col1 col2 ." ". . . ." ". col3 col4 .";
+    grid-template-rows: auto 10px auto auto;
+    grid-template-areas: ". top top ." ". . . ." ". col1 col2 ." ". col3 col4 .";
   }
   #team div:nth-child(1) {
     grid-area: top;
@@ -312,16 +316,15 @@ p {
 }
 @media all and (min-width: 1020px) {
   #team {
-    grid-template-columns: 10px auto auto auto auto 10px;
-    grid-template-rows: 120px auto 120px auto 120px;
-    grid-template-areas: ". . . . . ." ". top top top top ." ". . . . . ." ". col1 col2 col3 col4 .";
+    grid-row-gap: 120px;
+    grid-template-columns: 10px 1fr 1fr 1fr 1fr 10px;
+    grid-template-rows: auto auto;
+    grid-template-areas: ". top top top top ." ". col1 col2 col3 col4 .";
   }
 }
 @media all and (min-width: 1220px) {
   #team {
-    grid-template-columns: auto 271.5px 271.5px 271.5px 271.5px auto;
-    grid-template-rows: 120px auto 120px auto 120px;
-    grid-column-gap: 28px;
+    grid-template-columns: auto 284px 284px 284px 284px auto;
     /* 3 x @gutter + 4 x @block = 1170 */
     /* b = (1170 - 3g) / 4*/
   }
@@ -371,10 +374,13 @@ p {
 #skills {
   color: #3c4761;
   display: grid;
+  grid-column-gap: 30px;
+  grid-row-gap: 55px;
+  grid-column-gap: 20px;
+  grid-template-columns: 10px 1fr 1fr 10px;
+  grid-template-rows: auto 10px auto auto auto auto;
+  grid-template-areas: ". top top ." ". . . ." ". col1 col1 ." ". col2 col2 ." ". col3 col3 ." ". col4 col4 .";
   grid-column-gap: 5px;
-  grid-template-columns: 10px auto auto 10px;
-  grid-template-rows: 120px auto 120px auto 65px auto 65px auto 65px auto 120px;
-  grid-template-areas: ". . . ." ". top top ." ". . . ." ". col1 col1 ." ". . . ." ". col2 col2 ." ". . . ." ". col3 col3 ." ". . . ." ". col4 col4 .";
 }
 #skills div:nth-child(1) {
   grid-area: top;
@@ -393,9 +399,8 @@ p {
 }
 @media all and (min-width: 768px) {
   #skills {
-    grid-template-columns: 10px auto auto 10px;
-    grid-template-rows: 120px auto 120px auto 65px auto 120px;
-    grid-template-areas: ". . . ." ". top top ." ". . . ." ". col1 col2 ." ". . . ." ". col3 col4 .";
+    grid-template-rows: auto 10px auto auto;
+    grid-template-areas: ". top top ." ". . . ." ". col1 col2 ." ". col3 col4 .";
   }
   #skills div:nth-child(1) {
     grid-area: top;
@@ -415,16 +420,15 @@ p {
 }
 @media all and (min-width: 1020px) {
   #skills {
-    grid-template-columns: 10px auto auto auto auto 10px;
-    grid-template-rows: 120px auto 120px auto 120px;
-    grid-template-areas: ". . . . . ." ". top top top top ." ". . . . . ." ". col1 col2 col3 col4 .";
+    grid-row-gap: 120px;
+    grid-template-columns: 10px 1fr 1fr 1fr 1fr 10px;
+    grid-template-rows: auto auto;
+    grid-template-areas: ". top top top top ." ". col1 col2 col3 col4 .";
   }
 }
 @media all and (min-width: 1220px) {
   #skills {
-    grid-template-columns: auto 271.5px 271.5px 271.5px 271.5px auto;
-    grid-template-rows: 120px auto 120px auto 120px;
-    grid-column-gap: 28px;
+    grid-template-columns: auto 284px 284px 284px 284px auto;
     /* 3 x @gutter + 4 x @block = 1170 */
     /* b = (1170 - 3g) / 4*/
   }
@@ -451,9 +455,10 @@ p {
   color: #393939;
   display: grid;
   grid-column-gap: 30px;
+  grid-row-gap: 55px;
   grid-template-columns: 10px 1fr 1fr 10px;
-  grid-template-rows: 120px auto 120px auto 65px auto 65px auto 65px auto 65px auto 120px;
-  grid-template-areas: ". . . ." ". top top ." ". . . ." ". col1 col1 ." ". . . ." ". col2 col2 ." ". . . ." ". col3 col3 ." ". . . ." ". col4 col4 ." ". . . ." ". btn btn .";
+  grid-template-rows: auto 10px auto auto auto auto auto;
+  grid-template-areas: ". top top ." ". . . ." ". col1 col1 ." ". col2 col2 ." ". col3 col3 ." ". col4 col4 ." ". btn btn .";
 }
 #portfolio hr {
   color: #e5c37f;
@@ -494,13 +499,14 @@ p {
 #portfolio div:nth-child(5) {
   grid-area: col4;
 }
-#portfolio div:nth-child(6) {
+#portfolio p {
+  margin: 0;
   grid-area: btn;
 }
 @media all and (min-width: 800px) {
   #portfolio {
-    grid-template-rows: 120px auto 120px auto 65px auto 65px auto 120px;
-    grid-template-areas: ". . . ." ". top top ." ". . . ." ". col1 col2 ." ". . . ." ". col3 col4 ." ". . . ." ". btn btn .";
+    grid-template-rows: auto 10px auto auto auto;
+    grid-template-areas: ". top top ." ". . . ." ". col1 col2 ." ". col3 col4 ." ". btn btn .";
   }
   #portfolio div:nth-child(1) {
     grid-area: top;
@@ -517,26 +523,24 @@ p {
   #portfolio div:nth-child(5) {
     grid-area: col4;
   }
-  #portfolio div:nth-child(6) {
+  #portfolio p {
     grid-area: btn;
   }
 }
 @media all and (min-width: 1220px) {
   #portfolio {
     grid-template-columns: auto 595px 595px auto;
-    grid-template-rows: 120px auto 120px 1fr 65px 1fr 65px auto 120px;
-    grid-column-gap: 30px;
   }
 }
 #feedback {
   background-color: #d74680;
-  padding-bottom: 0;
   color: white;
   display: grid;
   grid-column-gap: 30px;
+  grid-row-gap: 55px;
   grid-template-columns: 10px auto auto 10px;
-  grid-template-rows: 120px auto 120px auto 80px auto 80px auto 80px auto 120px;
-  grid-template-areas: ". . . ." ". top top ." ". . . ." ". col1 col2 ." ". . . ." ". col3 col4 ." ". . . ." ". col5 col6 ." ". . . ." ". col7 col8 .";
+  grid-template-rows: auto 10px auto auto auto auto;
+  grid-template-areas: ". top top ." ". . . ." ". col1 col2 ." ". col3 col4 ." ". col5 col6 ." ". col7 col8 .";
 }
 #feedback hr {
   color: #b73c6d;
@@ -592,22 +596,19 @@ p {
 }
 @media all and (min-width: 800px) {
   #feedback {
+    grid-row-gap: 120px;
     grid-template-columns: 10px auto auto auto auto 10px;
-    grid-template-rows: 120px auto 120px auto 120px auto 120px;
-    grid-template-areas: ". . . . . ." ". top top top top ." ". . . . . ." ". col1 col2 col3 col4 ." ". . . . . ." ". col5 col6 col7 col8 .";
+    grid-template-rows: auto auto auto;
+    grid-template-areas: ". top top top top ." ". col1 col2 col3 col4 ." ". col5 col6 col7 col8 .";
   }
 }
 @media all and (min-width: 1220px) {
   #feedback {
     grid-template-columns: auto 100px 365px 100px 365px auto;
-    grid-template-rows: 120px auto 120px auto 120px auto 120px;
-    grid-column-gap: 30px;
   }
 }
 #contact {
   background-color: #3c5499;
-  padding-top: 120px;
-  padding-bottom: 120px;
 }
 #contact hr {
   color: #273a71;
@@ -656,8 +657,9 @@ p {
   margin-top: 80px;
   display: grid;
   grid-gap: 25px;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas: "name email" "message message" "submit submit";
+  grid-template-columns: 1fr;
+  grid-auto-rows: auto auto auto;
+  grid-template-areas: "name" "email" "message" "submit";
 }
 #contact form input[name="name"] {
   grid-area: name;
@@ -671,6 +673,25 @@ p {
 #contact form p {
   margin-top: 0;
   grid-area: submit;
+}
+@media all and (min-width: 768px) {
+  #contact form {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "name email" "message message" "submit submit";
+  }
+  #contact form input[name="name"] {
+    grid-area: name;
+  }
+  #contact form input[name="_replyto"] {
+    grid-area: email;
+  }
+  #contact form textarea {
+    grid-area: message;
+  }
+  #contact form p {
+    margin-top: 0;
+    grid-area: submit;
+  }
 }
 #social-media {
   background-color: #344b8e;

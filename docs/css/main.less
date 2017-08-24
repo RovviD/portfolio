@@ -2,9 +2,15 @@
   font-family: 'Titillium Web', sans-serif;
 }
 
+section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
 .display-gap-grid {
   display: grid;
   grid-column-gap: 30px;
+  grid-row-gap: 55px;
 }
 
 .grid-area {
@@ -26,52 +32,42 @@
 }
 
 .four-column-grid {
-  display: grid;
-  grid-column-gap: 5px;
+  .display-gap-grid;
+  grid-column-gap: 20px;
 
-  grid-template-columns: 10px auto auto 10px;
-  grid-template-rows: 120px auto 120px auto 65px auto 65px auto 65px auto 120px;
-  grid-template-areas: ". . . ."
-  ". top top ."
+  grid-template-columns: 10px 1fr 1fr 10px;
+  grid-template-rows: auto 10px auto auto auto auto;
+  grid-template-areas: ". top top ."
   ". . . ."
   ". col1 col1 ."
-  ". . . ."
   ". col2 col2 ."
-  ". . . ."
   ". col3 col3 ."
-  ". . . ."
   ". col4 col4 .";
 
   .grid-area;
 
   @media all and (min-width: 768px) {
-    grid-template-columns: 10px auto auto 10px;
-    grid-template-rows: 120px auto 120px auto 65px auto 120px;
-    grid-template-areas:". . . ."
-    ". top top ."
+    grid-template-rows: auto 10px auto auto;
+    grid-template-areas: ". top top ."
     ". . . ."
     ". col1 col2 ."
-    ". . . ."
     ". col3 col4 .";
 
     .grid-area;
   }
 
   @media all and (min-width: 1020px) {
-    grid-template-columns: 10px auto auto auto auto 10px;
-    grid-template-rows: 120px auto 120px auto 120px;
-    grid-template-areas: ". . . . . ."
-    ". top top top top ."
-    ". . . . . ."
+    grid-row-gap: 120px;
+    grid-template-columns: 10px 1fr 1fr 1fr 1fr 10px;
+    grid-template-rows: auto auto;
+    grid-template-areas: ". top top top top ."
     ". col1 col2 col3 col4 .";
   }
 
   @media all and (min-width: 1220px) {
-    @block-size: unit((1170 - 3*28) /4, px);
+    @block-size: unit((1220 - 3*28) /4, px);
 
     grid-template-columns: auto @block-size @block-size @block-size @block-size auto;
-    grid-template-rows: 120px auto 120px auto 120px;
-    grid-column-gap: unit(28, px);
 
     /* 3 x @gutter + 4 x @block = 1170 */
     /* b = (1170 - 3g) / 4*/
@@ -174,8 +170,6 @@ p {
 }
 
 #home {
-  padding-top: 120px;
-  padding-bottom: 120px;
   background-color: #87509c;
   color: white;
 
@@ -287,6 +281,7 @@ p {
 #skills {
   color: #3c4761;
   .four-column-grid;
+  grid-column-gap: 5px;
 
   hr {
     color: #c8d9e5;
@@ -351,38 +346,31 @@ p {
   .display-gap-grid;
 
   grid-template-columns: 10px 1fr 1fr 10px;
-  grid-template-rows: 120px auto 120px auto 65px auto 65px auto 65px auto 65px auto 120px;
-  grid-template-areas: ". . . ."
-  ". top top ."
+  grid-template-rows: auto 10px auto auto auto auto auto;
+  grid-template-areas: ". top top ."
   ". . . ."
   ". col1 col1 ."
-  ". . . ."
   ". col2 col2 ."
-  ". . . ."
   ". col3 col3 ."
-  ". . . ."
   ". col4 col4 ."
-  ". . . ."
   ". btn btn .";
 
   .grid-area;
-  div:nth-child(6) {
+  p {
+    margin: 0;
     grid-area: btn;
   }
 
   @media all and (min-width: 800px) {
-    grid-template-rows: 120px auto 120px auto 65px auto 65px auto 120px;
-    grid-template-areas: ". . . ."
-    ". top top ."
+    grid-template-rows: auto 10px auto auto auto;
+    grid-template-areas: ". top top ."
     ". . . ."
     ". col1 col2 ."
-    ". . . ."
     ". col3 col4 ."
-    ". . . ."
     ". btn btn .";
 
     .grid-area;
-    div:nth-child(6) {
+    p {
       grid-area: btn;
     }
   }
@@ -391,14 +379,11 @@ p {
     @block-size: unit((1220 - 30) /2, px);
 
     grid-template-columns: auto @block-size @block-size auto;
-    grid-template-rows: 120px auto 120px 1fr 65px 1fr 65px auto 120px;
-    grid-column-gap: 30px;
   }
 }
 
 #feedback {
   background-color: #d74680;
-  padding-bottom: 0;
   color: white;
 
   hr {
@@ -435,16 +420,12 @@ p {
     .display-gap-grid;
 
     grid-template-columns: 10px auto auto 10px;
-    grid-template-rows: 120px auto 120px auto 80px auto 80px auto 80px auto 120px;
-    grid-template-areas: ". . . ."
-    ". top top ."
+    grid-template-rows: auto 10px auto auto auto auto;
+    grid-template-areas: ". top top ."
     ". . . ."
     ". col1 col2 ."
-    ". . . ."
     ". col3 col4 ."
-    ". . . ."
     ". col5 col6 ."
-    ". . . ."
     ". col7 col8 .";
 
     .grid-area;
@@ -462,13 +443,11 @@ p {
     }
 
   @media all and (min-width: 800px) {
+    grid-row-gap: 120px;
     grid-template-columns: 10px auto auto auto auto 10px;
-    grid-template-rows: 120px auto 120px auto 120px auto 120px;
-    grid-template-areas: ". . . . . ."
-    ". top top top top ."
-    ". . . . . ."
+    grid-template-rows: auto auto auto;
+    grid-template-areas: ". top top top top ."
     ". col1 col2 col3 col4 ."
-    ". . . . . ."
     ". col5 col6 col7 col8 .";
   }
 
@@ -476,15 +455,11 @@ p {
     @block-size: unit((1220 - 3*30) /2 - (2*100), px);
 
     grid-template-columns: auto 100px @block-size 100px @block-size auto;
-    grid-template-rows: 120px auto 120px auto 120px auto 120px;
-    grid-column-gap: unit(30, px);
   }
 }
 
 #contact {
   background-color: #3c5499;
-  padding-top: 120px;
-  padding-bottom: 120px;
 
   hr {
     color: #273a71;
@@ -536,12 +511,15 @@ p {
 
   form {
     margin-top: 80px;
+
     display: grid;
     grid-gap: 25px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "name email"
-      "message message"
-      "submit submit";
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto auto auto;
+    grid-template-areas: "name"
+    "email"
+    "message"
+    "submit";
 
     input[name="name"] {
       grid-area: name;
@@ -560,6 +538,29 @@ p {
       grid-area: submit;
     }
 
+    @media all and (min-width: 768px) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "name email"
+      "message message"
+      "submit submit";
+
+      input[name="name"] {
+        grid-area: name;
+      }
+
+      input[name="_replyto"] {
+        grid-area: email;
+      }
+
+      textarea {
+        grid-area: message;
+      }
+
+      p {
+        margin-top: 0;
+        grid-area: submit;
+      }
+    }
   }
 }
 
