@@ -350,7 +350,7 @@ p {
 
   .display-gap-grid;
 
-  grid-template-columns: 10px auto auto 10px;
+  grid-template-columns: 10px 1fr 1fr 10px;
   grid-template-rows: 120px auto 120px auto 65px auto 65px auto 65px auto 65px auto 120px;
   grid-template-areas: ". . . ."
   ". top top ."
@@ -371,9 +371,7 @@ p {
   }
 
   @media all and (min-width: 800px) {
-
-    grid-template-columns: 10px auto auto 10px;
-    grid-template-rows: 120px auto 120px 1fr 65px 1fr 65px auto 120px;
+    grid-template-rows: 120px auto 120px auto 65px auto 65px auto 120px;
     grid-template-areas: ". . . ."
     ". top top ."
     ". . . ."
@@ -497,14 +495,9 @@ p {
     color: white;
   }
 
-  p {
-    margin-bottom: 80px;
-  }
-
   input {
     background-color: #273a71;
     border: none;
-    margin-bottom: 27px;
     padding: 25px 0 25px 25px;
   }
 
@@ -516,7 +509,7 @@ p {
     background-color: #273a71;
     border: none;
     display: block;
-    margin: 0 auto;
+    margin: 0;
     height: 200px;
     padding: 20px 0 0 25px;
   }
@@ -529,7 +522,6 @@ p {
   .action-button {
     box-shadow: 0 6px #299ec5;
     background: #30bae7;
-    margin-top: 59px;
   }
 
   .action-button:hover {
@@ -540,6 +532,34 @@ p {
   .action-button:active {
     background-color: #30bae7;
     box-shadow: none;
+  }
+
+  form {
+    margin-top: 80px;
+    display: grid;
+    grid-gap: 25px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "name email"
+      "message message"
+      "submit submit";
+
+    input[name="name"] {
+      grid-area: name;
+    }
+
+    input[name="_replyto"] {
+      grid-area: email;
+    }
+
+    textarea {
+      grid-area: message;
+    }
+
+    p {
+      margin-top: 0;
+      grid-area: submit;
+    }
+
   }
 }
 

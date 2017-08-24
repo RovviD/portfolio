@@ -263,20 +263,12 @@
             <br>phone: <a href="callto:+48570104119">+48 570 104 119</a></p>
 
         <form method="POST" action="https://formspree.io/adrian.paszul@gmail.com">
-            <div class="row">
-                <div class="col-sm-5 col-sm-offset-1">
-                    <input name="name" type="text" class="form-control" placeholder="Your Name">
-                </div>
-                <div class="col-sm-5">
-                    <input name="_replyto" type="text" class="form-control" placeholder="Your Email">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-10 col-sm-offset-1">
-                    <textarea name="text" class="form-control" placeholder="Your Message"></textarea>
-                </div>
-            </div>
-            <button data-toggle="popover" data-trigger="manual" data-title="Error!" data-content="Please fill out all fields before sending the form." class="action-button">Send message</button>
+            <input name="name" type="text" class="form-control" placeholder="Your Name">
+            <input name="_replyto" type="text" class="form-control" placeholder="Your Email">
+            <textarea name="text" class="form-control" placeholder="Your Message"></textarea>
+            <p class="text-center">
+                <button data-toggle="popover" data-trigger="manual" data-title="Error!" data-content="Please fill out all fields before sending the form." class="action-button">Send message</button>
+            </p>
         </form>
     </div>
 </section>
