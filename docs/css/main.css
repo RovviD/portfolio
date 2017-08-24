@@ -5,6 +5,58 @@ section {
   padding-top: 120px;
   padding-bottom: 120px;
 }
+.grid {
+  display: grid;
+  grid-column-gap: 30px;
+  grid-row-gap: 60px;
+  margin-top: 120px;
+  grid-column-gap: 20px;
+  grid-template-columns: 10px 1fr 1fr 10px;
+  grid-template-areas: ". col1 col1 ." ". col2 col2 ." ". col3 col3 ." ". col4 col4 .";
+}
+.grid div:nth-child(1) {
+  grid-area: col1;
+}
+.grid div:nth-child(2) {
+  grid-area: col2;
+}
+.grid div:nth-child(3) {
+  grid-area: col3;
+}
+.grid div:nth-child(4) {
+  grid-area: col4;
+}
+@media all and (min-width: 768px) {
+  .grid {
+    grid-template-areas: ". col1 col2 ." ". col3 col4 .";
+  }
+  .grid div:nth-child(1) {
+    grid-area: col1;
+  }
+  .grid div:nth-child(2) {
+    grid-area: col2;
+  }
+  .grid div:nth-child(3) {
+    grid-area: col3;
+  }
+  .grid div:nth-child(4) {
+    grid-area: col4;
+  }
+}
+@media all and (min-width: 1020px) {
+  .grid {
+    grid-row-gap: 120px;
+    grid-template-columns: 10px 1fr 1fr 1fr 1fr 10px;
+    grid-template-areas: ". col1 col2 col3 col4 .";
+  }
+}
+@media all and (min-width: 1220px) {
+  .grid {
+    grid-template-columns: auto 284px 284px 284px 284px auto;
+    /* 3 x @gutter + 4 x @block = 1170 */
+    /* b = (1170 - 3g) / 4*/
+  }
+}
 h1 {
   font-size: 40px;
   text-transform: uppercase;
@@ -113,18 +165,18 @@ p {
   background-color: #17c2a4;
   color: white;
 }
-#services .row i {
+#services .grid i {
   display: block;
-  margin: 80px auto 50px auto;
+  margin-bottom: 50px;
   font-size: 140px;
   color: #e7f1f8;
 }
-#services .row h2 {
+#services .grid h2 {
   font-size: 24px;
   text-transform: uppercase;
   font-weight: 700;
 }
-#services .row p {
+#services .grid p {
   font-size: 16px;
   margin: 24px auto 0 auto;
   font-weight: 300;
@@ -137,31 +189,31 @@ p {
   color: #c8d9e5;
   background-color: #c8d9e5;
 }
-#team .row {
+#team .grid > div {
   color: #27283d;
 }
-#team .row img {
+#team .grid > div img {
   width: 200px;
   height: 200px;
   display: block;
-  margin: 80px auto 0 auto;
+  margin: 0 auto;
 }
-#team .row address {
+#team .grid > div address {
   font-size: 24px;
   font-weight: 700;
   display: block;
   margin: 40px 0 20px 0;
 }
-#team .row address small {
+#team .grid > div address small {
   font-size: 16px;
   color: #30bae7;
 }
-#team .row p {
+#team .grid > div p {
   font-size: 16px;
-  margin-top: 30px;
   font-weight: 300;
+  margin-bottom: 0;
 }
-#team .row .fa {
+#team .grid > div .fa {
   height: 32px;
   width: 32px;
   border-radius: 50%;
@@ -171,25 +223,32 @@ p {
   padding-top: 7px;
   margin: 0 5px 0 5px;
 }
-#team .row .fa:hover {
+#team .grid > div .fa:hover {
   background: #17c2a4;
   transition: all 1s;
   text-decoration: none;
 }
 #skills {
   color: #3c4761;
+  text-align: center;
 }
 #skills hr {
   color: #c8d9e5;
   background-color: #dfe8ed;
 }
-#skills .row .chart {
+#skills p {
+  margin-bottom: 120px;
+}
+#skills .grid {
+  grid-column-gap: 5px;
+}
+#skills .grid > div .chart {
   width: 250px;
   height: 250px;
   position: relative;
-  margin: 40px auto 0 auto;
+  margin: 0 auto;
 }
-#skills .row h2 {
+#skills .grid > div h2 {
   font-size: 24px;
   font-weight: 700;
   margin: 0;
@@ -199,19 +258,9 @@ p {
   background-color: #ffdd99;
   color: #393939;
 }
-#portfolio p {
-  margin-bottom: 65px;
-}
 #portfolio hr {
   color: #e5c37f;
   background-color: #e5c37f;
-}
-#portfolio .row img {
-  margin: 0 auto;
-}
-#portfolio .row p {
-  font-size: 18px;
-  margin: 30px 0 65px 0;
 }
 #portfolio .action-button {
   box-shadow: 0 6px #14a58c;
@@ -226,43 +275,110 @@ p {
   background-color: #17c2a4;
   box-shadow: none;
 }
+#portfolio .grid {
+  grid-template-columns: 10px 1fr 1fr 10px;
+  grid-template-areas: ". col1 col1 ." ". col2 col2 ." ". col3 col3 ." ". col4 col4 ." ". btn btn .";
+}
+#portfolio .grid > div img {
+  margin: 0 auto;
+}
+#portfolio .grid > div p {
+  font-size: 18px;
+  margin-top: 30px;
+}
+#portfolio .grid div:nth-child(1) {
+  grid-area: col1;
+}
+#portfolio .grid div:nth-child(2) {
+  grid-area: col2;
+}
+#portfolio .grid div:nth-child(3) {
+  grid-area: col3;
+}
+#portfolio .grid div:nth-child(4) {
+  grid-area: col4;
+}
+#portfolio .grid p {
+  margin: 0;
+  grid-area: btn;
+}
+@media all and (min-width: 800px) {
+  #portfolio .grid {
+    grid-template-areas: ". col1 col2 ." ". col3 col4 ." ". btn btn .";
+  }
+}
+@media all and (min-width: 1220px) {
+  #portfolio .grid {
+    grid-template-columns: auto 595px 595px auto;
+  }
+}
 #feedback {
   background-color: #d74680;
-  padding-bottom: 0;
   color: white;
 }
 #feedback hr {
   color: #b73c6d;
   background-color: #b73c6d;
 }
-#feedback p {
-  margin-bottom: 80px;
+#feedback .grid {
+  grid-template-columns: 10px auto auto 10px;
+  grid-template-areas: ". col1 col2 ." ". col3 col4 ." ". col5 col6 ." ". col7 col8 .";
 }
-#feedback img {
-  width: 100px;
-}
-#feedback .row {
+#feedback .grid > div {
   filter: blur(5px);
 }
-#feedback .row q {
+#feedback .grid > div q {
   margin: 0 auto 20px auto;
   font-size: 21px;
   font-style: italic;
 }
-#feedback .row address {
+#feedback .grid > div address {
   margin: 0 auto;
   text-transform: uppercase;
   font-size: 24px;
   font-weight: 700;
-  margin-bottom: 120px;
 }
-#feedback .row small {
+#feedback .grid > div small {
   font-size: 18px;
   color: #ffdd99;
 }
+#feedback .grid div:nth-child(1) {
+  grid-area: col1;
+}
+#feedback .grid div:nth-child(2) {
+  grid-area: col2;
+}
+#feedback .grid div:nth-child(3) {
+  grid-area: col3;
+}
+#feedback .grid div:nth-child(4) {
+  grid-area: col4;
+}
+#feedback .grid div:nth-child(5) {
+  grid-area: col5;
+}
+#feedback .grid div:nth-child(6) {
+  grid-area: col6;
+}
+#feedback .grid div:nth-child(7) {
+  grid-area: col7;
+}
+#feedback .grid div:nth-child(8) {
+  grid-area: col8;
+}
+@media all and (min-width: 800px) {
+  #feedback .grid {
+    grid-template-columns: 10px auto auto auto auto 10px;
+    grid-template-areas: ". col1 col2 col3 col4 ." ". col5 col6 col7 col8 .";
+  }
+}
+@media all and (min-width: 1220px) {
+  #feedback .grid {
+    grid-template-columns: auto 100px 365px 100px 365px auto;
+  }
+}
 #contact {
   background-color: #3c5499;
-  padding: 0 auto !important;
 }
 #contact hr {
   color: #273a71;
@@ -273,14 +389,16 @@ p {
 #contact p {
   color: white;
 }
-#contact p {
-  margin-bottom: 80px;
+#contact h1 .popover,
+#contact a .popover,
+#contact p .popover {
+  color: black;
 }
 #contact input {
   background-color: #273a71;
   border: none;
-  margin-bottom: 27px;
-  padding: 25px 0 25px 25px;
+  padding: 20px 25px;
+  height: auto;
 }
 #contact input::placeholder,
 #contact textarea::placeholder {
@@ -290,9 +408,9 @@ p {
   background-color: #273a71;
   border: none;
   display: block;
-  margin: 0 auto;
+  margin: 0;
   height: 200px;
-  padding: 20px 0 0 25px;
+  padding: 20px 25px;
 }
 #contact input.form-control,
 #contact textarea.form-control {
@@ -302,7 +420,6 @@ p {
 #contact .action-button {
   box-shadow: 0 6px #299ec5;
   background: #30bae7;
-  margin-top: 59px;
 }
 #contact .action-button:hover {
   box-shadow: 0 4px #299ec5;
@@ -312,24 +429,50 @@ p {
   background-color: #30bae7;
   box-shadow: none;
 }
-.social-media {
+#contact form {
+  margin-top: 120px;
+  display: grid;
+  grid-gap: 25px;
+  grid-template-columns: 1fr;
+  grid-template-areas: "name" "email" "message" "submit";
+}
+#contact form input[name="name"] {
+  grid-area: name;
+}
+#contact form input[name="_replyto"] {
+  grid-area: email;
+}
+#contact form textarea {
+  grid-area: message;
+}
+#contact form p {
+  margin-top: 0;
+  grid-area: submit;
+}
+@media all and (min-width: 768px) {
+  #contact form {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "name email" "message message" "submit submit";
+  }
+}
+#social-media {
   background-color: #344b8e;
 }
-.social-media footer {
+#social-media footer {
   margin: 22px 0 0;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
-.social-media a {
+#social-media a {
   color: white;
   font-size: 24px;
   text-transform: capitalize;
   font-weight: 600;
   margin: 0 22px 22px 0;
 }
-.social-media a:hover,
-.social-media a:focus {
+#social-media a:hover,
+#social-media a:focus {
   color: #30bae7;
   text-decoration: none;
 }
