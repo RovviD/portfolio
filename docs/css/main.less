@@ -7,12 +7,6 @@ section {
   padding-bottom: 120px;
 }
 
-.p-margin() {
-  p {
-    margin-bottom: 120px;
-  }
-}
-
 .display-gap-grid() {
   display: grid;
   grid-column-gap: 30px;
@@ -34,7 +28,9 @@ section {
   }
 }
 
-.four-column-grid() {
+.grid {
+  margin-top: 120px;
+
   .display-gap-grid();
   grid-column-gap: 20px;
 
@@ -195,11 +191,8 @@ p {
 #services {
   background-color: #17c2a4;
   color: white;
-  .p-margin();
 
   .grid {
-    .four-column-grid();
-
     i {
       display: block;
       margin-bottom: 50px;
@@ -224,7 +217,6 @@ p {
 #team {
   background-color: #e7f1f8;
   color: #3c4761;
-  .p-margin();
 
   hr {
     color: #c8d9e5;
@@ -232,8 +224,6 @@ p {
   }
 
   .grid {
-    .four-column-grid();
-
     >div {
       color: #27283d;
 
@@ -285,8 +275,6 @@ p {
 #skills {
   color: #3c4761;
   text-align: center;
-  grid-column-gap: 5px;
-  .p-margin();
 
   hr {
     color: #c8d9e5;
@@ -298,7 +286,7 @@ p {
   }
 
   .grid {
-    .four-column-grid();
+    grid-column-gap: 5px;
 
     >div {
       .chart {
@@ -322,7 +310,6 @@ p {
 #portfolio {
   background-color: #ffdd99;
   color: #393939;
-  .p-margin();
 
   hr {
     color: #e5c37f;
@@ -387,7 +374,6 @@ p {
 #feedback {
   background-color: #d74680;
   color: white;
-  .p-margin();
 
   hr {
     color: #b73c6d;

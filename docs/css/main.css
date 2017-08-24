@@ -6,6 +6,7 @@ section {
   padding-bottom: 120px;
 }
 .grid {
+  margin-top: 120px;
   display: grid;
   grid-column-gap: 30px;
   grid-row-gap: 60px;
@@ -164,9 +165,6 @@ p {
   background-color: #17c2a4;
   color: white;
 }
-#services p {
-  margin-bottom: 120px;
-}
 #services .grid i {
   display: block;
   margin-bottom: 50px;
@@ -186,9 +184,6 @@ p {
 #team {
   background-color: #e7f1f8;
   color: #3c4761;
-}
-#team p {
-  margin-bottom: 120px;
 }
 #team hr {
   color: #c8d9e5;
@@ -236,10 +231,6 @@ p {
 #skills {
   color: #3c4761;
   text-align: center;
-  grid-column-gap: 5px;
-}
-#skills p {
-  margin-bottom: 120px;
 }
 #skills hr {
   color: #c8d9e5;
@@ -247,6 +238,9 @@ p {
 }
 #skills p {
   margin-bottom: 120px;
+}
+#skills .grid {
+  grid-column-gap: 5px;
 }
 #skills .grid > div .chart {
   width: 250px;
@@ -263,9 +257,6 @@ p {
 #portfolio {
   background-color: #ffdd99;
   color: #393939;
-}
-#portfolio p {
-  margin-bottom: 120px;
 }
 #portfolio hr {
   color: #e5c37f;
@@ -327,9 +318,6 @@ p {
 #feedback {
   background-color: #d74680;
   color: white;
-}
-#feedback p {
-  margin-bottom: 120px;
 }
 #feedback hr {
   color: #b73c6d;
