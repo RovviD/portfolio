@@ -1,4 +1,4 @@
-## My Porfolio Website
+## My Portfolio Website
 
 [CSS Grid version](https://rovvid.github.io/portfolio/)
 
