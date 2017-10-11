@@ -328,9 +328,13 @@ p {
   }
 
   .grid {
+    .device-wrapper {
+      max-width: none;
+    }
+
     >div {
       img {
-        margin: 0 auto;
+        margin: 20px auto 0 auto;
       }
 
       p {
@@ -339,6 +343,7 @@ p {
       }
     }
 
+    grid-column-gap: 40px;
     grid-template-columns: 10px 1fr 1fr 10px;
     grid-template-areas: ". col1 col1 ."
     ". col2 col2 ."
