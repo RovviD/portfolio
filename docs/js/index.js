@@ -26,7 +26,7 @@ $('.navbar-fixed-top ul li:eq(3)').on('activate.bs.scrollspy', function () {
 $(function() {
     $('body').on('click', '.navbar a, .btn-scroll', function(event) {
         event.preventDefault();
-        var newPosition = $($(this).attr('href')).offset().top - 83;
+        var newPosition = $($(this).attr('href')).offset().top - 60;
 
         if ($(this).attr('href') === '#home') {
             newPosition = 0;
