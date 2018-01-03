@@ -24,7 +24,7 @@ $('.navbar-fixed-top ul li:eq(3)').on('activate.bs.scrollspy', function () {
 });
 
 $(function() {
-    $('body').on('click', '.navbar a, .btn-scroll', function(event) {
+    $('body').on('click', '.navbar ul a, .btn-scroll', function(event) {
         event.preventDefault();
         var newPosition = $($(this).attr('href')).offset().top - 60;
 
