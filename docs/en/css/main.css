@@ -289,7 +289,10 @@ p {
   max-width: none;
 }
 #portfolio .grid > div img {
-  margin: 20px auto 0 auto;
+  margin: 20px;
+}
+#portfolio .grid > div .device-fcc {
+  margin-top: 5px;
 }
 #portfolio .grid > div p {
   font-size: 18px;
