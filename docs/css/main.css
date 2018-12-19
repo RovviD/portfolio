@@ -115,9 +115,8 @@ p {
 }
 .navbar .flag {
   float: right;
-  width: 55px;
-  height: 50px;
-  margin-top: 17px;
+  width: 45px;
+  margin-top: 25px;
 }
 .navbar ul {
   padding: 20px;
